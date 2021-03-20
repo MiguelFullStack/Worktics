@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\anuncios_index;
+use App\Http\Controllers\empleo;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [anuncios_index::class, 'index'] );
+Route::get('/empleo', [empleo::class, 'index'] );
